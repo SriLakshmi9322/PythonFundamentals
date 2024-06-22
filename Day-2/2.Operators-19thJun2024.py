@@ -93,3 +93,57 @@ print(id(x3))           # 1640374357440
 print(id(y3))           # 1640374357952
 print(x3 is y3)         # False
 print(x3 is not y3)     # True
+
+a = 10
+b = 5
+x = a
+y = b
+z = a
+print(x is y)           # False
+print(x is a)           # True
+print(y is b)           # True
+print(x is not y)       # True
+print(x is not a)       # False
+print(x is z)           # True
+
+
+# 6. Membership Operators - To test whether a value or variable is a
+# member of a sequence, such as a string, list, or tuple.
+# in - returns True if a character or the entire substring is present in the
+#      specifies string, otherwise False
+# not in - returns True if a character or entire substring does not exist in
+#          the specified string, otherwise False
+
+str1 = 'ramuIT'
+str2 = 'tirumalaCSE'
+str3 = 'ramu'
+str4 = 'tirumala'
+
+print(str3 in str1)                 # True
+print(str4 in str2)                 # True
+print(str3 in str2)                 # False
+print('ratan' in 'ratanIT')         # True
+print('ratan' in 'durgaSOFT')       # False
+print(str3 not in str1)             # False
+print(str4 not in str2)             # False
+print(str3 not in str2)             # True
+print('ratan' not in 'ratanIT')     # False
+print('ratan' not in 'anu')         # True
+
+
+# 7. Bitwise Operators - To perform bitwise calculations on integers.
+# The integers will be converted into binary format later
+# operations are performed bit by bit.
+
+print(3 & 7)        # 3 - Bitwise AND
+print(9 & 6)        # 0
+print(15 & 15)      # 15
+print(0 & 0)        # 0
+print(3 | 7)        # 7 - Bitwise OR
+print(9 | 6)        # 15
+print(15 | 15)      # 15
+print(0 | 0)        # 0
+print(~ 7)          # -8 - Bitwise NOT
+print(3 ^ 7)        # 4 - Bitwise XOR
+print(3 >> 1)       # 1 - Bitwise RightShift
+print(3 << 1)       # 6 - Bitwise LeftShift
