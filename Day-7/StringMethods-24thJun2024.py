@@ -239,10 +239,10 @@ word_decimal = "\u0033"
 print(word_decimal.isdecimal())     # True
 
 # Example-2 :
-O_Unicode = "\u0030"        # Unicode for '0'
-G_Unicode = "\u0047"        # Unicode for 'G'
-print(O_Unicode.isdecimal())        # True
-print(G_Unicode.isdecimal())        # False
+unicode_0 = "\u0030"        # Unicode for '0'
+unicode_G = "\u0047"        # Unicode for 'G'
+print(unicode_0.isdecimal())        # True
+print(unicode_G.isdecimal())        # False
 
 
 # 13. isdigit() - Returns True if all characters in the string are digits
