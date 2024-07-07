@@ -30,6 +30,43 @@ print('I am not inside if-block')
 # 10 is less than 15
 # I am not inside if-block
 
+# Example-3 :
+is_hot = True
+
+if is_hot:
+    print("It's a Hot Day!")
+
+print("Enjoy Your Day.!!")
+
+# Output :
+# It's a Hot Day!
+# Enjoy Your Day.!!
+
+# Example-4 :
+is_hot1 = False
+
+if is_hot1:
+    print("It's a Hot Day!")
+
+print("Enjoy Your Day.!!")
+
+# Output :
+# Enjoy Your Day.!!
+
+# Example-5 :
+is_hot2 = True
+
+if is_hot2:
+    print("It's a Hot Day!")
+    print("Drink Plenty of Water!!")
+
+print("Enjoy Your Day.!!")
+
+# Output :
+# It's a Hot Day!
+# Drink Plenty of Water!!
+# Enjoy Your Day.!!
+
 # Nested if Statement - When we want to check another condition inside one
 # condition we can use nested-if statement
 
@@ -51,7 +88,7 @@ print('Nested-if ends')
 # for True a block of code and if not True another block of code then
 # we can use if-else statements
 
-# Example :
+# Example-1 :
 i = 10
 
 if (i > 15):
@@ -68,6 +105,23 @@ print('I am out of both if & else blocks')
 # 10 is not less than 15
 # I am in else-block
 # I am out of both if & else blocks
+
+# Example-2 :
+is_hot3 = False
+
+if is_hot3:
+    print("It's a Hot Day!")
+    print("Drink Plenty of Water!!")
+else:
+    print("It's a Cold Day!")
+    print("Wear Warm Clothes!!")
+
+print("Enjoy Your Day.!!")
+
+# Output :
+# It's a Cold Day!
+# Wear Warm Clothes!!
+# Enjoy Your Day.!!
 
 
 # 3. elif statements - When we have more than one condition to check
@@ -123,3 +177,22 @@ else:
 # Output :
 #  Please enter an integer : 99
 # It is a Positive Number
+
+# Example-4 :
+is_hot5 = False
+is_cold = False
+
+if is_hot5:
+    print("It's a Hot Day!")
+    print("Drink Plenty of Water!!")
+elif is_cold:
+    print("It's a Cold Day!")
+    print("Wear Warm Clothes!!")
+else:
+    print("It's a lovely Day.!!")
+
+print("Enjoy Your Day.!!") 
+
+# Output :
+# It's a lovely Day.!!
+# Enjoy Your Day.!!
