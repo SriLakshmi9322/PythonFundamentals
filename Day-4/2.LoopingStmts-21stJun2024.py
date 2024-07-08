@@ -131,10 +131,11 @@ for w in words:
 # rat 3
 # four 4
 
+# 2. while loop
 # When we know the number of iterations we can use for loop
 # But, when we need to iterate until a condition fails we can use 'while' loop
 
-# Example :
+# Example-1 :
 a = 0
 while (a < 10):
     print(a)
@@ -151,6 +152,23 @@ while (a < 10):
 # 7
 # 8
 # 9
+
+# Example-2:
+value = 1
+
+while value <= 5:
+    print("*" * value)
+    value += 1
+
+print("Done!")
+
+# Output :
+# *
+# **
+# ***
+# ****
+# *****
+# Done!
 
 # While loop with else block
 # else is always executed after the while loop is over unless
