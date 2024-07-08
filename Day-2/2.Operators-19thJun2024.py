@@ -32,6 +32,18 @@ print('x <= y is', x <= y)      # x <= y is False - Less than or Equal to
 print('x == y is', x == y)      # x == y is False - Equal to
 print('x != y is', x != y)      # x != y is True - Not Equal to
 
+# Example :
+temp = 35
+
+if temp >= 30:
+    print("It's a Hot Day!")
+elif temp <= 10:
+    print("It's a Cold Day!")
+else:
+    print("It's neither Hot nor Cold!!")
+
+# Output : It's a Hot Day!
+
 
 # 3. Logical Operators -  evaluate Boolean expressions and determine whether
 # the entire expression is True or False based on the operator used.
@@ -42,6 +54,35 @@ print('x and y is', x and y)        # x and y is False
 # OR (Atleast on value should be True to get True)
 print('x or y is', x or y)          # x or y is True
 print('not x is', not x)            # not x is False - NOT (Opposite value)
+
+# Example-1 : To Build an application for processing loans based on 2 condition
+# Loan can be applicable when the user has both high income and good credit.
+has_high_income = True
+has_good_credit = True
+
+if has_high_income and has_good_credit:
+    print("Eligible for Loan!")
+
+# Output : Eligible for Loan!
+
+# Example-2 :
+# Loan can be applicable when the user has either high income or good credit.
+has_high_income1 = True
+has_good_credit1 = False
+
+if has_high_income1 or has_good_credit1:
+    print("Eligible for Loan!")
+
+# Output : Eligible for Loan!
+
+# Example-3 : If applicant has good credit and doesn't have a criminal record
+has_good_credit2 = True
+has_criminal_record = False
+
+if has_good_credit2 and not has_criminal_record:
+    print("Eligible for Loan!")
+
+# Output : Eligible for Loan!
 
 
 # 4. Assignment Operator - To assign a new value to the variable
