@@ -131,6 +131,48 @@ for w in words:
 # rat 3
 # four 4
 
+# Example-3 :
+numbers = [5, 2, 5, 2, 2]
+for item in numbers:
+    for i in range(item):
+        print("X", end="")
+    print()
+
+# Output :
+# XXXXX
+# XX
+# XXXXX
+# XX
+# XX
+
+# Example-4 :
+num_list = [5, 2, 5, 2, 2]
+for x_count in num_list:
+    output = ""
+    for count in range(x_count):
+        output += 'X'
+    print(output)
+
+# Output :
+# XXXXX
+# XX
+# XXXXX
+# XX
+# XX
+
+# Example-5 :
+numbers = [2, 2, 2, 6]
+for item in numbers:
+    for i in range(item):
+        print("X", end="")
+    print()
+
+# Output :
+# XX
+# XX
+# XX
+# XXXXXX
+
 # 2. while loop
 # When we know the number of iterations we can use for loop
 # But, when we need to iterate until a condition fails we can use 'while' loop

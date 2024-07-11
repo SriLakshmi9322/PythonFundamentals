@@ -31,3 +31,21 @@ print(tup4)                             # ()
 print(type(tup5))                       # <class 'int'>
 print(type(tup6))                       # <class 'tuple'>
 print(tup7)                             # (1, 2, 3, 'Sri', 10.5)
+
+
+# Tuple Methods : There are 2 methods.
+# 1. count() - Returns the number of occurrences of a specified element.
+tupl = (1, 2, 3, 1, 1, 2, 3, 5, 4, 1)
+print(tupl.count(1))                    # 4
+
+# 2. index() - Returns the index value of specified element in the tuple.
+tupl1 = ('SriLakshmi', 99, 5.4, 10+5j, 99)
+print(tupl1.index('SriLakshmi'))        # 0
+print(tupl1.index(99, 3))               # 4
+
+
+# Tuple Unpacking
+coordinates = (10, 20, 30)
+x, y, z = coordinates
+print("Unpacked Elements : ", end="")
+print(x, y, z, sep=", ")
