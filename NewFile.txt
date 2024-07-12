@@ -1,0 +1,5 @@
+File Created
+File Currently in Write mode
+To stop write mode we can use close() function
+
+New Information Appended to the File

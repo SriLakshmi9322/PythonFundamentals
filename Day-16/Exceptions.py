@@ -16,11 +16,9 @@ when an error occurs during the execution of a program.
 5. KeyError
 6. ValueError
 7. AttributeError
-8. IOError
-9. ZeroDivisionError: This exception is raised when an attempt is made to
-   divide a number by zero.
-10. ImportError: This exception is raised when an import statement fails to
-    find or load a module.
+8. FileNotFoundError
+9. ZeroDivisionError
+10. ImportError
 
 Instead of Program crash we can handle the situation & Print proper Error
 Message. To make this possible we use 'try' and 'except' blocks.
@@ -108,3 +106,36 @@ except ZeroDivisionError:
 # Enter the no. of months been in your new job : 2
 # Enter Your Age : Twenty One
 # Invalid Value...
+
+print(dir(locals()['__builtins__']))
+"""
+['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',
+'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',
+'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',
+'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',
+'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',
+'FileExistsError', 'FileNotFoundError', 'FloatingPointError', 'FutureWarning',
+'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError',
+'IndexError', 'InterruptedError', 'IsADirectoryError', 'KeyError',
+'KeyboardInterrupt', 'LookupError', 'MemoryError', 'ModuleNotFoundError',
+'NameError', 'None', 'NotADirectoryError', 'NotImplemented',
+'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning',
+'PermissionError', 'ProcessLookupError', 'RecursionError', 'ReferenceError',
+'ResourceWarning', 'RuntimeError', 'RuntimeWarning', 'StopAsyncIteration',
+'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit',
+'TabError', 'TimeoutError', 'True', 'TypeError', 'UnboundLocalError',
+'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError',
+'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError',
+'Warning', 'WindowsError', 'ZeroDivisionError', '__build_class__', '__debug__',
+'__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__',
+'abs', 'all', 'any', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray',
+'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'copyright',
+'credits', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec',
+'exit', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals',
+'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance',
+'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'max',
+'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print',
+'property', 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr',
+'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type',
+'vars', 'zip']
+"""
