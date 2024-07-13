@@ -50,7 +50,7 @@ print(age)
 try:
     age = int(input("Enter Your Age : "))
     print(age)
-except ValueError:
+except:
     print("Invalid Value...")
 
 # Output :
@@ -60,53 +60,155 @@ except ValueError:
 
 # Example-2 :
 try:
-    age = int(input("Enter Your Age : "))
-    income = 20000
-    risk = income / age
-    print(age)
+    result = 100 / 0
 except ValueError:
     print("Invalid Value...")
 
 # Output :
-# Enter Your Age : 0
 # Traceback (most recent call last):
-#   File "c:\Users\HP\Desktop\PythonFundamentals\Day-15\tempCodeRunnerFile.py",
-# line 5, in <module>
-#     risk = income / age
+#   File "c:\Users\HP\Desktop\PythonFundamentals\Day-16\tempCodeRunnerFile.py",
+# line 3, in <module>
+#     result = 100 / 0
 # ZeroDivisionError: division by zero
 
 # To Solve above problem We can use the concept of 'Multiple Except Blocks'
 try:
-    sal_package = int(input("Enter your Salary package : "))
-    experience = int(input("Enter the no. of months been in your new job : "))
-    age = int(input("Enter Your Age : "))
-    sal_earned = sal_package / experience
-    print(sal_earned)
-    print(f"You are {age} old! and you have earned {sal_earned} until now.!!")
+    numerator = int(input("Enter Numerator : "))
+    denominator = int(input("Enter Denominator : "))
+    age = int(input("Enter Age : "))
+    result = numerator / denominator
+    print(f"You are {age} old!\nThe result of the division is {result}")
 except ValueError:
     print("Invalid Value...")
 except ZeroDivisionError:
-    print("Age Cannot be Zero...")
+    print("Denominator Cannot be Zero...")
 
 # Output-1 : Normal Execution
-# Enter your Salary package : 1200000
-# Enter the no. of months been in your new job : 3
-# Enter Your Age : 21
-# 400000.0
-# You are 21 old! and you have earned 400000.0 until now.!!
+# Enter Numerator : 100
+# Enter Denominator : 10
+# Enter Age : 21
+# You are 21 old!
+# The result of the division is 10.0
 
 # Output-2 : When ZeroDivisionError Occurs
-# Enter your Salary package : 1200000
-# Enter the no. of months been in your new job : 0
-# Enter Your Age : 21
-# Age Cannot be Zero...
+# Enter Numerator : 100
+# Enter Denominator : 0
+# Enter Age : 21
+# Denominator Cannot be Zero...
 
 # Output-3 : When ValueError Occurs
-# Enter your Salary package : 1200000
-# Enter the no. of months been in your new job : 2
-# Enter Your Age : Twenty One
+# Enter Numerator : 100
+# Enter Denominator : 10
+# Enter Age : Twenty One
 # Invalid Value...
 
+
+# We can simply catch all the Exceptions using single except block.
+# Example :
+try:
+    numerator = int(input("Enter Numerator : "))
+    denominator = int(input("Enter Denominator : "))
+    age = int(input("Enter Age : "))
+    result = numerator / denominator
+    print(f"You are {age} old!\nThe result of the division is {result}")
+except Exception:           # It catches all kind of Exceptions.
+    print("Error: Some Exception occured.!")
+
+# Output-1 : When 'ZeroDivisionError' occurs.
+# Enter Numerator : 100
+# Enter Denominator : 0
+# Enter Age : 21
+# Error: Some Exception occured.!
+
+# Output-2 : When 'ValueError' occurs.
+# Enter Numerator : 1000
+# Enter Denominator : 10
+# Enter Age : Twenty One
+# Error: Some Exception occured.!
+
+# We can also display the error message directly without writing any kind of
+# user-defined error messages.
+try:
+    result = 100 / 0
+except ZeroDivisionError as zde:
+    print(zde)
+
+# Output : division by zero
+
+# try with else clause.
+# Example :
+try:
+    numerator = int(input("Enter Numerator : "))
+    denominator = int(input("Enter Denominator : "))
+    result = numerator / denominator
+    print(f"The result of the division is {result}")
+except ZeroDivisionError:
+    print("Error: Denominator can not be zero.!")
+else:       # Executes after try block if no exception occurs
+    print("No Exception Occured.")
+
+# Output :
+# Enter Numerator : 25
+# Enter Denominator : 5
+# The result of the division is 5.0
+# No Exception Occured.
+
+# try with finally keyword.
+# Example :
+try:
+    numerator = int(input("Enter Numerator : "))
+    denominator = int(input("Enter Denominator : "))
+    result = numerator / denominator
+    print(f"The result of the division is {result}")
+except ZeroDivisionError:
+    print("Error: Denominator can not be zero.!")
+else:       # Executes after try block if no exception occurs
+    print("No Exception Occured.")
+finally:
+    print("This block will always be executed...")
+
+# Output-1 : When Exception Occurs.
+# Enter Numerator : 36
+# Enter Denominator : 0
+# Error: Denominator can not be zero.!
+# This block will always be executed...
+
+# Output-2 : Normal Execution.
+# Enter Numerator : 49
+# Enter Denominator : 7
+# The result of the division is 7.0
+# No Exception Occured.
+# This block will always be executed...
+
+# Raising Exception : The raise statement allows the programmer to force a
+# specific exception to occur.
+# Example-1 :
+try:
+    raise ZeroDivisionError("Raising an Exception...")
+except ZeroDivisionError:
+    print("Error: An Exception occured.")
+
+# Output : Error: An Exception occured.
+
+# Example-2 : rasing the actual bult-in Exception.
+try:
+    raise NameError("Raising an Exception")
+except NameError:
+    print("Exception Block...")
+    raise
+# Raises the Exception that causes program crash with the message passed in
+# the try block raise statement.
+
+# Output :
+# Exception Block...
+# Traceback (most recent call last):
+#   File "c:\Users\HP\Desktop\PythonFundamentals\Day-16\tempCodeRunnerFile.py",
+# line 3, in <module>
+#     raise NameError("Raising an Exception")
+# NameError: Raising an Exception
+
+
+# Python Built-in Keywords, Exceptions, methods list.
 print(dir(locals()['__builtins__']))
 """
 ['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',
