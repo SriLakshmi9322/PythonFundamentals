@@ -1,0 +1,4 @@
+INFO:root:Running "add" with arguements (3, 3)
+INFO:root:Running "add" with arguements (4, 5)
+INFO:root:Running "sub" with arguements (10, 5)
+INFO:root:Running "sub" with arguements (20, 10)
