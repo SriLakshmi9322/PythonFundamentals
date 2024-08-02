@@ -11,9 +11,9 @@ class SubClass(ParentClass1, ..., ParentClassn):
     'Optional class documentation string'
     class_suite
 """
-# Example :
 
 
+# Example-1 :
 class Parent:
     parentAttr = 100
 
@@ -49,3 +49,47 @@ c.getAttr()             # Again calling parent class method
 # Calling Child Method.!!
 # Calling Parent Method.!!
 # Parent Attribute : 200
+
+
+# Example-2 :
+class Person(object):       # Parent class
+    def __init__(self, name, idnumber):
+        self.name = name
+        self.idnumber = idnumber
+
+    def display(self):
+        print(self.name)
+        print(self.idnumber)
+
+    def details(self):
+        print("My Name is {}".format(self.name))
+        print("Idnumber : {}".format(self.idnumber))
+
+
+# Child Class
+class Employee(Person):
+    def __init__(self, name, idnumber, salary, post):
+        self.salary = salary
+        self.post = post
+
+        # Invoking the __init__ of the Parent class
+        Person.__init__(self, name, idnumber)
+
+    def details(self):
+        print("My Name is {}".format(self.name))
+        print("Idnumber : {}".format(self.idnumber))
+        print("Post : {}".format(self.post))
+
+
+a = Employee('Rahul', 886012, 200000, "Intern")
+
+# Calling a function of the class Person using it's instance
+a.display()
+a.details()
+
+# Output :
+# Rahul
+# 886012
+# My Name is Rahul
+# Idnumber : 886012
+# Post : Intern
