@@ -20,3 +20,35 @@ if __name__ == '__main__':
     print(len(string))
 
 # Output : 21
+
+
+# Program to demonstrate how an object be used in any other circumstances
+# until it is not supported.
+class Bird:
+    def fly(self):
+        print("Fly with Wings!")
+
+
+class Airplane:
+    def fly(self):
+        print("Fly with Fuel!")
+
+
+class Fish:
+    def swim(self):
+        print("Fish swims in Sea!")
+
+
+# Attributes having same name are considered as DuckTyping
+for obj in Bird(), Airplane(), Fish():
+    obj.fly()
+
+
+# Output :
+# Fly with Wings!
+# Fly with Fuel!
+# Traceback (most recent call last):
+#   File "c:\Users\HP\Desktop\PythonFundamentals\Day-13\tempCodeRunnerFile.py",
+#  line 20, in <module>
+#     obj.fly()
+# AttributeError: 'Fish' object has no attribute 'fly'
